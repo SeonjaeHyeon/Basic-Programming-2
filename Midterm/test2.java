@@ -1,3 +1,5 @@
+// 60201716 현선재
+
 import java.util.Scanner;
 
 public class test2 {
