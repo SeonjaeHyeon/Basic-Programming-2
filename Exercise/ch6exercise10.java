@@ -16,7 +16,7 @@ class Person {
         }
 
         for(int i = 0; i < num.length; i++) {
-            num[i] = (int)((Math.random() * 10) / 3 + 1);
+            num[i] = (int)(Math.random() * 10) % 3 + 1;
             System.out.print(num[i] + "\t");
         }
     }
