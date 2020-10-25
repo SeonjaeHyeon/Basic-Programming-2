@@ -12,7 +12,7 @@ public class ch6exercise9 {
             System.out.print("철수[가위(1), 바위(2), 보(3), 끝내기(4)]>>");
             input = scanner.nextInt();
 
-            random = (int)(Math.random() * 10) / 3 + 1;
+            random = (int)(Math.random() * 10) % 3 + 1;
 
             if(input == 1) {
                 System.out.print("철수(가위) : ");
