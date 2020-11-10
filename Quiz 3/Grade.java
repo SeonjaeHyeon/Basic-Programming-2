@@ -50,9 +50,7 @@ public class Grade {
             index++;
         }
 
-
         System.out.println("Java 성적 입니다.");
-        System.out.println(keyArray.length);
 
         for(int i = 0; i < keyArray.length; i++) {
             System.out.print(keyArray[i]);
