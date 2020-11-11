@@ -1,5 +1,6 @@
 // 60201716 현선재
 // 제출 마감 후 오류 수정
+// 코드 가독성 문제 수정
 
 import java.util.*;
 
@@ -23,31 +24,21 @@ public class Grade {
         }
 
         var keys = data.keySet();
-        var it = keys.iterator();
-        var al = new LinkedList<Integer>();
-        while(it.hasNext()) {
-            String n = it.next();
-            al.add(data.get(n));
-        }
+        var al = new ArrayList<>(data.values());
         Collections.sort(al);
         Collections.reverse(al);
 
         String [] keyArray = new String[al.size()];
-        var it2 = al.iterator();
-        int index = 0;
-        while(it2.hasNext()) {
-            int num = it2.next();
-
-            var it3 = keys.iterator();
-            while(it3.hasNext()) {
-                String n2 = it3.next();
-                if(data.get(n2) == num) {
-                    keyArray[index] = n2;
-                    break;
+        for(int i = 0; i < al.size(); i++) {
+            int num = al.get(i);
+            
+            var it = keys.iterator();
+            while(it.hasNext()) {
+                String key = it.next();
+                if(data.get(key) == num) {
+                    keyArray[i] = key;
                 }
             }
-
-            index++;
         }
 
         System.out.println("Java 성적 입니다.");
