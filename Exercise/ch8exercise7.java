@@ -9,6 +9,7 @@ public class ch8exercise7 {
         
         try {
             System.out.println("a.jpg를 b.jpg로 복사합니다.");
+            System.out.println("10%마다 *를 출력합니다.");
 
             File orig = new File("a.jpg");
 
